@@ -182,13 +182,42 @@ Assume that $m = 1000$ and $n_obs = (650,100,150,100,0,0,\dots)$ show that $\hat
 
 \indent \textbf{Solution:} \\
 \[
-   \hat{\lambda} = \frac{100 + 2 150  + 3 100  }{650 + 100 + 150 + 100} = 0.7  
+   \hat{\lambda} = \frac{100 + 2\cdot 150  + 3\cdot 100  }{650 + 100 + 150 + 100} = 0.7  
 \]
 
 \subsection{Q2.5}
 show that the distribution of $N_0$ is $Binomial(m,e^{-\lambda})$ and calculate $E(N_0)$
 and the variance $\sqrt{Var(N_0)}$
 
+\indent \textbf{Solution:} \\
+We know that $N_0$ is a Poisson distribution that a person has 0 apartments $P(X=0) = \frac{e^{-\lambda} \lambda^0}{0!} = e^{-\lambda}$ 
+since in the scenario are m people and each of them has $e^{-\lambda}$ of owning 0 apartments out of m
+it follows a fit to Binomial distribution $Binomial(m,e^{-\lambda})$
+Then the expectation follows from the Binomial distribution 
+\[
+    E(N_0)=m\cdot e^{-\lambda}  
+\]
+
+and the variance also follows from the Binomial distribution as
+
+\[
+    Var(N_0) = m \cdot e^{-\lambda} \cdot (1-e^{\lambda})    
+\]
+
+the standard deviation is 
+
+\[
+    sqrt{Var(N_0)} = sqrt{m \cdot e^{-\lambda} \cdot (1-e^{\lambda}) } 
+\]
+
+these just follows from the poisson and binomial distribution.
+
+
+
+
+\subsection{Q2.6}
+
+\indent \textbf{Solution:} \\
 
 
 
